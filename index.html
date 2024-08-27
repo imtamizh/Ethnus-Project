@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Test</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+<body>
+    
+    <div class="containor">
+       
+        <h1>Navigate the car using the buttons</h1>
+       <center>
+        <input type="button" value="start" id="start" onclick="start()"/>
+        <input type="button" value="stop" id="stop" onclick="stop()"/>
+        <input type="button" value="rev" id="rev"   onclick="rev()">
+       </center>
+        <img src="./images/car1.png" alt="car images" id="mycar">
+    
+    </div>
+
+    <script>
+        let carele = document.getElementById("mycar");
+        let animate;
+        let revanimate;
+
+        function init() {
+            carele.style.left = "0px";
+        }
+
+        window.onload = init;
+
+        function start() {
+            carele.style.left = parseInt(carele.style.left) + 10 + "px", parseInt(carele.style.top) + 10 + "px";
+            animate = setTimeout(start, 50)
+        }
+        
+        function stop() {
+            clearTimeout(animate)
+
+        }
+
+        function rev() {
+            carele.style.left = parseInt(carele.style.left) + -10 + "px";
+            animate = setTimeout(rev, 50)
+        }
+    </script>
+    
+</body>
+</html>
