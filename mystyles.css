@@ -5,7 +5,7 @@ html, body {
 .containor {
     margin: 0px;
     padding: 0px;
-    background-image: url("/CarAnimate/images/background.jpeg");
+    background-image: url("./images/background.jpeg");
     height: 100vh;
 }
 
